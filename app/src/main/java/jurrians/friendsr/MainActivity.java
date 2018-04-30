@@ -7,9 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ImageView;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -110,8 +108,6 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            ImageView imageView = findViewById(R.id.profileImage);
-
             Friend clickedFriend = (Friend) parent.getItemAtPosition(position);
             Log.d("OnItemClick", clickedFriend.getName());
 

@@ -11,8 +11,6 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-
-
 public class ProfileActivity extends AppCompatActivity {
 
     @Override
@@ -28,13 +26,10 @@ public class ProfileActivity extends AppCompatActivity {
         TextView bioText = findViewById(R.id.bioText);
         RatingBar ratingBar = findViewById(R.id.ratingBar);
 
-
         profileImage.setImageResource(clickedFriend.getDrawableId());
         profileText.setText(clickedFriend.getName());
         bioText.setText(clickedFriend.getBio());
         loadFromSharedPrefs();
-
-
 
         RatingBar.OnRatingBarChangeListener barChangeListener = new RatingBar.OnRatingBarChangeListener() {
             @Override
@@ -48,8 +43,6 @@ public class ProfileActivity extends AppCompatActivity {
         };
 
         ratingBar.setOnRatingBarChangeListener(barChangeListener);
-
-
     }
 
     public void loadFromSharedPrefs() {
@@ -65,10 +58,6 @@ public class ProfileActivity extends AppCompatActivity {
             ratingBar.setRating(0.0f);
         }
     }
-//
-//    public void makeIntent(View view) {
-//    }
-
 }
 
 
